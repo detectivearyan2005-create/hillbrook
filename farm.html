@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The House | Vatsalya Vihar</title>
+    <link rel="icon" type="image/png" href="./image2/vatsalya-tree.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vatsalya_vihar.css" />
+    <link rel="stylesheet" href="/css/farm.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- sitereveal -->
+    <div id="siteReveal">
+      <div id="siteReveal__logo">
+        <img src="./image2/Logo-Icon-Black.png" alt="Vatsalya Vihar" />
+      </div>
+    </div>
+
+    <!-- starting section -->
+    <section class="hero">
+      <!-- Background image (desktop only) -->
+      <!-- Background video (desktop only) -->
+      <video
+        id="heroDesktopVideo"
+        class="hero__bg-img hero__bg-desktop"
+        src="./image2/vatsalya-vihar-video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Background video (mobile only) -->
+      <video
+        id="heroMobileVideo"
+        class="hero__bg-img hero__bg-mobile"
+        src="./image2/Video-63.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Sound toggle button -->
+      <button
+        id="heroSoundToggle"
+        class="hero__sound-toggle"
+        aria-label="Toggle sound"
+      >
+        <svg
+          class="hero__sound-icon hero__sound-icon--muted"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <svg
+          class="hero__sound-icon hero__sound-icon--on"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <span class="hero__sound-label">Sound</span>
+      </button>
+
+      <!-- Bottom fade overlay -->
+      <div class="hero__fade"></div>
+
+      <!-- Logo -->
+      <a
+        href="index.html"
+        class="hero__logo"
+        id="heroLogo"
+        aria-label="Vatsalya Vihar home"
+      >
+        <img src="./image2/main-logo-vatsalya.png" alt="" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hero__nav" id="heroNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="house.html">The House</a>
+        <a href="farm.html">The Farm</a>
+        <a href="gather.html">Gather Here</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="book.html">Book Now</a>
+      </nav>
+
+      <!-- Hamburger button (mobile) -->
+      <button
+        class="hero__hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile dropdown menu -->
+      <nav class="hero__mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="house.html">The House</a>
+        <a href="farm.html">The Farm</a>
+        <a href="gather.html">Gather Here</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="book.html">Book Now</a>
+      </nav>
+
+      <!-- Hero Title -->
+      <h1 class="page-hero__title" aria-label="the house">THE FARM</h1>
+    </section>
+
+    <section class="farm-intro">
+      <div class="farm-intro__inner">
+        <div class="farm-intro__left">
+          <h2 class="farm-intro__title">
+            A farm in <em>recovery</em> –<br />
+            and a landscape<br />
+            coming <em>back to life</em>
+          </h2>
+        </div>
+
+        <div class="farm-intro__right">
+          <p class="farm-intro__desc">
+            When the current owners became custodians of Hillbrook in April
+            2020, it was the land itself that set the direction. Rugged hill
+            country, ancient pōhutukawa, a waterfall leading to a private beach,
+            and the Tapapararoa Stream running its full length through the
+            property. That stream — starting and ending on the land — conferred
+            kaitiakitanga, stewardship over an entire catchment. But it was the
+            potential beneath the surface that truly captured them. The
+            possibility of what the land could become, and the chance to help a
+            small piece of Aotearoa find its way back to itself.
+          </p>
+
+          <a href="#" class="farm-intro__cta">
+            BOOK NOW
+            <span class="farm-intro__cta-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="video-wrap">
+        <img
+          class="video-player"
+          src="./image2/vastalyavihar.png"
+          alt="Vatsalya Vihar"
+        />
+      </div>
+    </section>
+
+    <section class="beach-section">
+      <div class="beach-section__inner">
+        <div class="beach-section__media-left">
+          <img
+            class="beach-section__img beach-section__img--left"
+            id="beachImgLeft"
+            src="https://picsum.photos/seed/vv-beach-main/1200/1600"
+            alt="White sand beach through pōhutukawa forest"
+          />
+        </div>
+
+        <div class="beach-section__right">
+          <div class="beach-section__media-small">
+            <img
+              class="beach-section__img beach-section__img--small"
+              id="beachImgSmall"
+              src="https://picsum.photos/seed/vv-beach-picnic/500/400"
+              alt="Picnic table beneath pōhutukawa trees"
+            />
+          </div>
+
+          <div class="beach-section__content">
+            <h2 class="beach-section__title">
+              Through the pōhutukawa,<br />
+              down to <em>the sea</em>
+            </h2>
+
+            <p class="beach-section__desc">
+              A 15-minute walk from the main house takes you through ancient
+              pōhutukawa forest and down to a white sand beach on the Pacific.
+              The path is yours alone — no roads, no through traffic, no one
+              passing through. As close to a private beach as New Zealand gets.
+              There's a reliable surf break, good fishing, and if you arrive
+              quietly, the NZ Dotterel — a threatened shorebird that nests here.
+              It's the kind of place that's hard to leave.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="land-speak">
+      <div class="land-speak__inner">
+        <h2 class="land-speak__title">
+          <em>Letting</em> the land<br />
+          speak
+        </h2>
+
+        <p class="land-speak__desc">
+          One of the first decisions made on the farm was about what to stop. No
+          more synthetic sprays. No more artificial fertilisers. No more stock
+          in the waterways. From there, allowing the land to show what it was
+          best suited for, what it needed, and a 50-year vision for this place
+          came alive.
+        </p>
+      </div>
+    </section>
+
+    <section class="lux-section">
+      <div class="lux-carousel" id="luxCarousel3">
+        <div class="lux-track" id="luxTrack3">
+          <!-- Slides are generated by JS from the IMAGES array -->
+        </div>
+
+        <div class="lux-controls">
+          <div class="lux-nav">
+            <button
+              class="lux-btn lux-btn--prev"
+              id="luxPrev3"
+              aria-label="Previous slide"
+            >
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button
+              class="lux-btn lux-btn--next"
+              id="luxNext3"
+              aria-label="Next slide"
+            >
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hectares-section">
+      <div class="hectares-section__inner">
+        <div class="hectares-section__media">
+          <img
+            class="hectares-section__img"
+            id="hectaresImg"
+            src="https://picsum.photos/seed/vv-farm-ponds/1200/1200"
+            alt="Ponds signpost overlooking the coast"
+          />
+        </div>
+
+        <div class="hectares-section__content">
+          <h2 class="hectares-section__title">
+            <em>Eleven</em> hectares and<br />
+            <em>counting…</em>
+          </h2>
+
+          <div class="hectares-section__desc">
+            <p>
+              Since 2021, Hillbrook has completed three solid winter plantings
+              across around 11 hectares of marginal grazing land — areas too
+              steep for heavy-footed animals, better suited to native forest.
+            </p>
+            <p>
+              Alongside the planting, wetlands have been restored, waterways
+              fenced from stock, and a whole-farm predator control programme put
+              in place to give native flora and fauna a fighting chance. The
+              Tapapararoa Stream — which starts and ends on the property — runs
+              cleaner for it. The NZ Dotterel nests undisturbed on the beach.
+              And in the old citrus orchard, a syntropic food forest is taking
+              shape, subtropical and temperate species coexisting in a system
+              designed to produce and restore at the same time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="land-back-section">
+      <div class="land-back-section__inner">
+        <div class="land-back-section__left-col">
+          <div class="land-back-section__left">
+            <h2 class="land-back-section__title">
+              See the land<br />
+              <em>coming back</em>
+            </h2>
+
+            <div class="land-back-section__desc">
+              <p>
+                The walking and bike tracks at Hillbrook take you through 11
+                hectares of restoration in progress. What makes them unusual is
+                the ability to see time itself — the 2021 planting now well
+                overhead and forming a canopy, the 2022 planting thickening
+                behind it, and the 2026 planting just beginning to find its
+                feet. The same land, three different moments in a long recovery.
+              </p>
+              <p>
+                The tracks wind through native forest, around the wetlands, and
+                out to views over the Pacific. Start close to the house at the
+                orchard, go as far as you like, and let the land tell its own
+                story.
+              </p>
+            </div>
+          </div>
+
+          <div class="land-back-section__media-small">
+            <img
+              class="land-back-section__img land-back-section__img--small"
+              id="landBackImgSmall"
+              src="https://picsum.photos/seed/vv-farm-fence-view/600/700"
+              alt="Fenced paddock overlooking the coast"
+            />
+          </div>
+        </div>
+
+        <div class="land-back-section__media-large">
+          <img
+            class="land-back-section__img land-back-section__img--large"
+            id="landBackImgLarge"
+            src="https://picsum.photos/seed/vv-farm-native-forest/1200/1800"
+            alt="Path through native forest at Hillbrook"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section" id="bookSection">
+      <div class="book-section__bg-wrap">
+        <img
+          class="book-section__img"
+          id="bookImg"
+          src="./image2/book-photo.webp"
+          alt="Book your stay"
+        />
+      </div>
+      <div class="book-section__overlay"></div>
+
+      <div class="book-section__content">
+        <h2
+          class="book-section__text"
+          id="bookText"
+          aria-label="Book your stay"
+        >
+          <span id="bookLine1"></span>
+        </h2>
+
+        <a href="#" class="book-section__cta" id="bookCta">
+          BOOK NOW
+          <span class="book-section__cta-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer-section">
+      <div class="footer-section__left">
+        <h2 class="footer-section__heading">
+          Something shifts when the right people find <em>the right place.</em>
+        </h2>
+
+        <div class="footer-section__form">
+          <input
+            type="email"
+            placeholder="Email address"
+            class="footer-section__input"
+          />
+          <!-- reCAPTCHA -->
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+        </div>
+
+        <a href="#" class="footer-section__cta">
+          BOOK NOW
+          <span class="footer-section__cta-arrow">&#8594;</span>
+        </a>
+      </div>
+
+      <div class="footer-section__right">
+        <nav class="footer-section__nav">
+          <div class="footer-section__nav-group">
+            <a href="index.html#sectionFarm"
+              ><span class="dot"></span
+              ><span class="link-text">THE RETREAT</span></a
+            >
+            <a href="index.html#sectionBeach"
+              ><span class="dot"></span><span class="link-text">STAYS</span></a
+            >
+            <a href="activities.html"
+              ><span class="dot"></span
+              ><span class="link-text">ACTIVITIES</span></a
+            >
+            <a href="gallery.html"
+              ><span class="dot"></span
+              ><span class="link-text">Gallery</span></a
+            >
+            <a href="contact-us.html"
+              ><span class="dot"></span
+              ><span class="link-text">Contact</span></a
+            >
+            <a href="book.html"
+              ><span class="dot"></span
+              ><span class="link-text">Booking</span></a
+            >
+          </div>
+        </nav>
+
+        <div class="footer-section__social">
+          <a
+            href="https://www.instagram.com/vatsalyavihar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <svg
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4.5" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/vatsalyaviharudaipur/"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- vatsalya vihar footer -->
+    <footer class="site-footer">
+      <h2 class="site-footer__brand">
+        <span class="site-footer__brand-text">VATSALYA VIHAR</span>
+      </h2>
+      <div class="site-footer__bottom">
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vatsalya_vihar.js"></script>
+  </body>
+</html>

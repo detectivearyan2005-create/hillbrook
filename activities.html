@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The House | Vatsalya Vihar</title>
+    <link rel="icon" type="image/png" href="./image2/vatsalya-tree.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vatsalya_vihar.css" />
+    <link rel="stylesheet" href="/css/farm.css" />
+    <link rel="stylesheet" href="/css/activities.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- sitereveal -->
+    <div id="siteReveal">
+      <div id="siteReveal__logo">
+        <img src="./image2/Logo-Icon-Black.png" alt="Vatsalya Vihar" />
+      </div>
+    </div>
+
+    <!-- starting section -->
+    <section class="hero">
+      <!-- Background image (desktop only) -->
+      <!-- Background video (desktop only) -->
+      <video
+        id="heroDesktopVideo"
+        class="hero__bg-img hero__bg-desktop"
+        src="./image2/vatsalya-vihar-video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Background video (mobile only) -->
+      <video
+        id="heroMobileVideo"
+        class="hero__bg-img hero__bg-mobile"
+        src="./image2/Video-63.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Sound toggle button -->
+      <button
+        id="heroSoundToggle"
+        class="hero__sound-toggle"
+        aria-label="Toggle sound"
+      >
+        <svg
+          class="hero__sound-icon hero__sound-icon--muted"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <svg
+          class="hero__sound-icon hero__sound-icon--on"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <span class="hero__sound-label">Sound</span>
+      </button>
+
+      <!-- Bottom fade overlay -->
+      <div class="hero__fade"></div>
+
+      <!-- Logo -->
+      <a
+        href="index.html"
+        class="hero__logo"
+        id="heroLogo"
+        aria-label="Vatsalya Vihar home"
+      >
+        <img src="./image2/main-logo-vatsalya.png" alt="" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hero__nav" id="heroNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="house.html">The House</a>
+        <a href="farm.html">The Farm</a>
+        <a href="gather.html">Gather Here</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="book.html">Book Now</a>
+      </nav>
+
+      <!-- Hamburger button (mobile) -->
+      <button
+        class="hero__hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile dropdown menu -->
+      <nav class="hero__mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="house.html">The House</a>
+        <a href="farm.html">The Farm</a>
+        <a href="gather.html">Gather Here</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="book.html">Book Now</a>
+      </nav>
+
+      <!-- Hero Title -->
+      <h1 class="page-hero__title" aria-label="the house">ACTIVITIES</h1>
+    </section>
+
+    <section class="farm-intro">
+      <div class="farm-intro__inner">
+        <div class="farm-intro__left">
+          <h2 class="farm-intro__title">
+            Discover
+            <em
+              >endless<br />
+              activities</em
+            >
+            at Hillbrook
+          </h2>
+        </div>
+
+        <div class="farm-intro__right">
+          <p class="farm-intro__desc">
+            On the property, you can enjoy leisurely activities and explore the
+            scenic surroundings. For those seeking more adventure, our dedicated
+            staff can arrange a variety of outdoor pursuits nearby.
+            Additionally, we can organise excursions to explore the wider area,
+            ensuring that your stay is filled with both relaxation and
+            excitement.
+          </p>
+
+          <a href="#" class="farm-intro__cta">
+            BOOK NOW
+            <span class="farm-intro__cta-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="activities">
+      <div class="activities__grid" id="activitiesGrid">
+        <div class="activity-card">
+          <div class="activity-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-swim-surf/600/920"
+              alt="Two women walking on the beach at sunset"
+            />
+          </div>
+          <div class="activity-card__label">
+            <span class="activity-card__dot"></span>
+            Swim &amp; Surf
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-farm-walks/600/920"
+              alt="Path through native forest with wooden steps"
+            />
+          </div>
+          <div class="activity-card__label">
+            <span class="activity-card__dot"></span>
+            Farm Walks
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-coastal-hikes/600/920"
+              alt="Coastal view over a fenced paddock"
+            />
+          </div>
+          <div class="activity-card__label">
+            <span class="activity-card__dot"></span>
+            Coastal Hikes
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-lawn-games/600/920"
+              alt="Lawn games set up on the grass"
+            />
+          </div>
+          <div class="activity-card__label">
+            <span class="activity-card__dot"></span>
+            Lawn Games
+          </div>
+        </div>
+      </div>
+
+      <div class="activities__slider-track">
+        <div class="activities__slider-fill" id="activitiesFill"></div>
+      </div>
+    </section>
+
+    <section class="adventure">
+      <div class="adventure__inner">
+        <h2 class="adventure__title">
+          Add some <em>adventure</em><br />
+          to your stay
+        </h2>
+
+        <p class="adventure__desc">
+          Bring an adventurous spirit to your Hillbrook experience. From
+          thrilling water activities to scenic trail explorations, we can
+          arrange everything for you. Let us help you create unforgettable
+          memories with exciting adventures tailored to your stay.
+        </p>
+      </div>
+    </section>
+
+    <section class="curated-services">
+      <div class="curated-services__grid">
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-island-tours/600/750"
+              alt="Aerial view of a paddleboarder on turquoise water"
+            />
+          </div>
+          <h3 class="curated-service-card__title">Guided Island tours</h3>
+          <p class="curated-service-card__desc">
+            Discover the beauty of our local islands by paddleboard, kayak, or
+            small boat. Let our expert guide lead you on an unforgettable
+            adventure through crystal-clear waters to one of the Coromandel's
+            hidden gems.
+          </p>
+        </div>
+
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-ebiking/600/750"
+              alt="Two cyclists riding along the coast"
+            />
+          </div>
+          <h3 class="curated-service-card__title">E-biking</h3>
+          <p class="curated-service-card__desc">
+            Choose from a range of e-bikes and mountain bikes, available to hire
+            directly from Hillbrook. Just 5 minutes away, enjoy access to one of
+            the region's top mountain bike parks — or take a relaxed ride around
+            the farm roads.
+          </p>
+        </div>
+
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-surf-lessons/600/750"
+              alt="Surfer standing on the beach holding a board"
+            />
+          </div>
+          <h3 class="curated-service-card__title">Surf lessons</h3>
+          <p class="curated-service-card__desc">
+            Learn to surf on the stunning beaches near Whangamata, guided by
+            expert instructors. Perfect for all skill levels, this exciting
+            activity offers an unforgettable New Zealand adventure.
+          </p>
+        </div>
+
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-day-tours/600/750"
+              alt="Group walking through a sea cave silhouetted against the light"
+            />
+          </div>
+          <h3 class="curated-service-card__title">Personalised Day Tours</h3>
+          <p class="curated-service-card__desc">
+            Let us curate a day to remember. In partnership with Kiwi Dundee
+            Adventures, we offer fully personalised tours tailored to your
+            interests — whether it's Māori culture, scenic hikes, hidden gems
+            off the beaten track, or simply a relaxed day of sightseeing and
+            local flavour. From immersive rainforest hikes among ancient kauri
+            trees and volcanic peaks, to leisurely explorations of the
+            Coromandel's most iconic landscapes, each experience is designed
+            just for you.
+          </p>
+          <a
+            class="curated-service-card__link"
+            href="https://kiwidundee.co.nz/"
+            target="_blank"
+            rel="noopener"
+            >https://kiwidundee.co.nz/</a
+          >
+        </div>
+
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-glass-boat/600/750"
+              alt="Aerial view of Cathedral Cove and sea caves"
+            />
+          </div>
+          <h3 class="curated-service-card__title">Glass Bottom Boat</h3>
+          <p class="curated-service-card__desc">
+            Explore Te Whanganui o Hei Marine Reserve above and below the
+            surface. Relax aboard their Glass Bottom Boat, view the fish and
+            marine life in their natural habitat. Soak up the stunning scenery
+            above the water with highlights Cathedral &amp; Orua Sea Cave or
+            take the plunge and snorkel amongst the schools of fish!
+          </p>
+          <a
+            class="curated-service-card__link"
+            href="https://www.gbbw.co.nz"
+            target="_blank"
+            rel="noopener"
+            >www.gbbw.co.nz</a
+          >
+        </div>
+
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-lost-spring/600/750"
+              alt="Person relaxing in geo-thermal pools surrounded by greenery"
+            />
+          </div>
+          <h3 class="curated-service-card__title">The Lost Spring</h3>
+          <p class="curated-service-card__desc">
+            Relax in the Geo-Thermal Pools, be pampered in the tree top Day Spa
+            or dine in their Restaurant, there are so many options at The Lost
+            Spring, Whitianga.
+          </p>
+          <a
+            class="curated-service-card__link"
+            href="https://www.thelostspring.co.nz"
+            target="_blank"
+            rel="noopener"
+            >www.thelostspring.co.nz</a
+          >
+        </div>
+
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-hahei-explorer/600/750"
+              alt="Aerial view of turquoise water and rock formations"
+            />
+          </div>
+          <h3 class="curated-service-card__title">Hahei explorer</h3>
+          <p class="curated-service-card__desc">
+            Cruise the Coromandel's stunning coastline and discover the iconic
+            Cathedral Cove with Hahei Explorer. Glide through crystal-clear
+            waters, past dramatic cliffs and sea caves, soaking in the coastal
+            serenity.
+          </p>
+          <a
+            class="curated-service-card__link"
+            href="https://www.haheiexplorer.co.nz"
+            target="_blank"
+            rel="noopener"
+            >www.haheiexplorer.co.nz</a
+          >
+        </div>
+
+        <div class="curated-service-card">
+          <div class="curated-service-card__img-wrap">
+            <img
+              src="https://picsum.photos/seed/vv-ocean-adventures/600/750"
+              alt="Dramatic coastal rock formations at Coromandel"
+            />
+          </div>
+          <h3 class="curated-service-card__title">
+            Coromandel Ocean Adventures
+          </h3>
+          <p class="curated-service-card__desc">
+            Experience an unforgettable marine adventure to the Aldermen
+            Islands, one of Aotearoa's top destinations for diving and wildlife
+            viewing. Enjoy crystal-clear waters, vibrant marine life, and
+            included snorkelling gear. There are also daily tours to Cathedral
+            Cove and surrounding sea caves, plus Slipper Island. Bespoke private
+            charters available.
+          </p>
+          <a
+            class="curated-service-card__link"
+            href="https://www.coadventures.co.nz"
+            target="_blank"
+            rel="noopener"
+            >www.coadventures.co.nz</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="gallery-stream" id="galleryStream">
+      <div class="gallery-stream__viewport">
+        <div class="gallery-stream__heading">
+          <h2 class="gallery-stream__title">
+            <em>Curated services</em> &amp;<br />
+            <em>experiences</em>
+            at Hillbrook
+          </h2>
+          <a href="#" class="gallery-stream__cta">
+            DISCOVER MORE
+            <span class="gallery-stream__cta-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="gallery-stream__columns">
+          <div class="gallery-column gallery-column--1" data-speed="0.35"></div>
+          <div class="gallery-column gallery-column--2" data-speed="0.65"></div>
+          <div class="gallery-column gallery-column--3" data-speed="0.5"></div>
+          <div class="gallery-column gallery-column--4" data-speed="0.8"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section" id="bookSection">
+      <div class="book-section__bg-wrap">
+        <img
+          class="book-section__img"
+          id="bookImg"
+          src="./image2/book-photo.webp"
+          alt="Book your stay"
+        />
+      </div>
+      <div class="book-section__overlay"></div>
+
+      <div class="book-section__content">
+        <h2
+          class="book-section__text"
+          id="bookText"
+          aria-label="Book your stay"
+        >
+          <span id="bookLine1"></span>
+        </h2>
+
+        <a href="#" class="book-section__cta" id="bookCta">
+          BOOK NOW
+          <span class="book-section__cta-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer-section">
+      <div class="footer-section__left">
+        <h2 class="footer-section__heading">
+          Something shifts when the right people find <em>the right place.</em>
+        </h2>
+
+        <div class="footer-section__form">
+          <input
+            type="email"
+            placeholder="Email address"
+            class="footer-section__input"
+          />
+          <!-- reCAPTCHA -->
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+        </div>
+
+        <a href="#" class="footer-section__cta">
+          BOOK NOW
+          <span class="footer-section__cta-arrow">&#8594;</span>
+        </a>
+      </div>
+
+      <div class="footer-section__right">
+        <nav class="footer-section__nav">
+          <div class="footer-section__nav-group">
+            <a href="index.html#sectionFarm"
+              ><span class="dot"></span
+              ><span class="link-text">THE RETREAT</span></a
+            >
+            <a href="index.html#sectionBeach"
+              ><span class="dot"></span><span class="link-text">STAYS</span></a
+            >
+            <a href="activities.html"
+              ><span class="dot"></span
+              ><span class="link-text">ACTIVITIES</span></a
+            >
+            <a href="gallery.html"
+              ><span class="dot"></span
+              ><span class="link-text">Gallery</span></a
+            >
+            <a href="contact.html"
+              ><span class="dot"></span
+              ><span class="link-text">Contact</span></a
+            >
+            <a href="book.html"
+              ><span class="dot"></span
+              ><span class="link-text">Booking</span></a
+            >
+          </div>
+        </nav>
+
+        <div class="footer-section__social">
+          <a
+            href="https://www.instagram.com/vatsalyavihar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <svg
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4.5" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/vatsalyaviharudaipur/"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- vatsalya vihar footer -->
+    <footer class="site-footer">
+      <h2 class="site-footer__brand">
+        <span class="site-footer__brand-text">VATSALYA VIHAR</span>
+      </h2>
+      <div class="site-footer__bottom">
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vatsalya_vihar.js"></script>
+  </body>
+</html>

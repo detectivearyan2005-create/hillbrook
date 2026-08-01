@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The House | Vatsalya Vihar</title>
+    <link rel="icon" type="image/png" href="./image2/vatsalya-tree.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vatsalya_vihar.css" />
+    <link rel="stylesheet" href="/css/farm.css" />
+    <link rel="stylesheet" href="/css/gather.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- sitereveal -->
+    <div id="siteReveal">
+      <div id="siteReveal__logo">
+        <img src="./image2/Logo-Icon-Black.png" alt="Vatsalya Vihar" />
+      </div>
+    </div>
+
+    <!-- starting section -->
+    <section class="hero">
+      <!-- Background image (desktop only) -->
+      <!-- Background video (desktop only) -->
+      <video
+        id="heroDesktopVideo"
+        class="hero__bg-img hero__bg-desktop"
+        src="./image2/vatsalya-vihar-video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Background video (mobile only) -->
+      <video
+        id="heroMobileVideo"
+        class="hero__bg-img hero__bg-mobile"
+        src="./image2/Video-63.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Sound toggle button -->
+      <button
+        id="heroSoundToggle"
+        class="hero__sound-toggle"
+        aria-label="Toggle sound"
+      >
+        <svg
+          class="hero__sound-icon hero__sound-icon--muted"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <svg
+          class="hero__sound-icon hero__sound-icon--on"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <span class="hero__sound-label">Sound</span>
+      </button>
+
+      <!-- Bottom fade overlay -->
+      <div class="hero__fade"></div>
+
+      <!-- Logo -->
+      <a
+        href="index.html"
+        class="hero__logo"
+        id="heroLogo"
+        aria-label="Vatsalya Vihar home"
+      >
+        <img src="./image2/main-logo-vatsalya.png" alt="" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hero__nav" id="heroNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="house.html">The House</a>
+        <a href="farm.html">The Farm</a>
+        <a href="gather.html">Gather Here</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="book.html">Book Now</a>
+      </nav>
+
+      <!-- Hamburger button (mobile) -->
+      <button
+        class="hero__hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile dropdown menu -->
+      <nav class="hero__mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="house.html">The House</a>
+        <a href="farm.html">The Farm</a>
+        <a href="gather.html">Gather Here</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="book.html">Book Now</a>
+      </nav>
+
+      <!-- Hero Title -->
+      <h1 class="page-hero__title" aria-label="the house">GATHER HERE</h1>
+    </section>
+
+    <section class="farm-intro">
+      <div class="farm-intro__inner">
+        <div class="farm-intro__left">
+          <h2 class="farm-intro__title">
+            The whole place, <em>all to yourselves</em>
+          </h2>
+        </div>
+
+        <div class="farm-intro__right">
+          <p class="farm-intro__desc">
+            Hillbrook is a nine-bedroom working farm estate on the Coromandel
+            Peninsula — available exclusively for your group. For milestone
+            birthdays, family reunions across oceans, and close friends who want
+            somewhere genuinely their own. No check-in desk. No other guests.
+            Just the house, the land, and everyone you came for.
+          </p>
+
+          <a href="#" class="farm-intro__cta">
+            GET IN TOUCH
+            <span class="farm-intro__cta-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gather-section">
+      <div class="gather-section__media">
+        <img
+          class="gather-section__img"
+          id="gatherImg"
+          src="https://picsum.photos/seed/vv-gathering/1920/1000"
+          alt="Friends and family gathering at Hillbrook"
+        />
+
+        <div class="gather-section__cards">
+          <div class="gather-card">
+            <span class="gather-card__num">01</span>
+            <h3 class="gather-card__title">
+              Families gathering<br />across generations
+            </h3>
+            <p class="gather-card__desc">
+              The 70th birthday that brings the family home from three
+              countries. Christmas that finally gets everyone in one place. A
+              reunion that's been five years in the planning. Enough room for
+              three generations to be under one roof without feeling crowded.
+            </p>
+          </div>
+
+          <div class="gather-card">
+            <span class="gather-card__num">02</span>
+            <h3 class="gather-card__title">Milestone<br />celebrations</h3>
+            <p class="gather-card__desc">
+              The 40th. The 50th. The anniversary that deserves more than a
+              dinner booking. Friends and family from across New Zealand, or
+              across the world, gathering to mark something real. Hillbrook is
+              sized right for it, and private enough to feel like it was made
+              for you.
+            </p>
+          </div>
+
+          <div class="gather-card">
+            <span class="gather-card__num">03</span>
+            <h3 class="gather-card__title">
+              Close friends,<br />proper time together
+            </h3>
+            <p class="gather-card__desc">
+              Not a hotel weekend. A weekend where you're actually present —
+              where the conversation runs late because no one is watching the
+              clock, and the mornings are slow because they can be. Something
+              that feels more like a home than a venue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stats-row">
+      <div class="stats-row__item">
+        <h3 class="stats-row__value">9 Bedrooms</h3>
+        <p class="stats-row__label">&nbsp;</p>
+      </div>
+
+      <div class="stats-row__item">
+        <h3 class="stats-row__value">20 Guests</h3>
+        <p class="stats-row__label">Maximum</p>
+      </div>
+
+      <div class="stats-row__item">
+        <h3 class="stats-row__value">45 Hectares</h3>
+        <p class="stats-row__label">Exclusively yours</p>
+      </div>
+
+      <div class="stats-row__item stats-row__item--last">
+        <h3 class="stats-row__value">0 other guests</h3>
+        <p class="stats-row__label">Ever.</p>
+      </div>
+    </section>
+
+    <section class="farm-intro">
+      <div class="farm-intro__inner">
+        <div class="farm-intro__left">
+          <h2 class="farm-intro__title">
+            Some occasions outgrow a restaurant. <em>They need a place.</em>
+          </h2>
+        </div>
+
+        <div class="farm-intro__right">
+          <p class="farm-intro__desc">
+            The people who come to Hillbrook are not looking for a hotel.
+            They're looking for somewhere that can hold a whole group — without
+            anyone feeling like a guest in someone else's space. Somewhere they
+            can make noise and make dinner and make a memory that lasts longer
+            than the weekend.
+          </p>
+          <p class="farm-intro__desc">
+            Hillbrook is a house first. The kitchen is large enough that
+            everyone ends up in it — some cooking, some at the island, some just
+            nearby — and it opens onto the dining room, which seats the whole
+            group together. The indoor heated pool, the media room, the hot tub,
+            the outdoor BBQ at dusk. Spaces for the group, and spaces to be
+            quietly alone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-grid padding-vertical-xhuge">
+      <div class="container-desktop-large padding-global-margins">
+        <div class="features-grid__row">
+          <div class="features-grid__item">
+            <div class="features-grid__media">
+              <img
+                class="cover-image"
+                src="https://picsum.photos/seed/vv-bedroom/800/1000"
+                alt="Bedroom with ocean view"
+              />
+            </div>
+            <h3 class="features-grid__title">7 or 9 bedrooms</h3>
+            <p class="features-grid__desc">
+              The house alone offers seven bedrooms. Add The Stables for two
+              self-contained suites and a total of nine — useful if part of your
+              group wants their own space.
+            </p>
+          </div>
+
+          <div class="features-grid__item">
+            <div class="features-grid__media">
+              <img
+                class="cover-image"
+                src="https://picsum.photos/seed/vv-pool/800/1000"
+                alt="Indoor heated pool"
+              />
+            </div>
+            <h3 class="features-grid__title">Indoor heated pool</h3>
+            <p class="features-grid__desc">
+              Year-round. Morning swims, afternoon drifts, evenings with steam
+              rising and no schedule to keep.
+            </p>
+          </div>
+
+          <div class="features-grid__item">
+            <div class="features-grid__media">
+              <img
+                class="cover-image"
+                src="https://picsum.photos/seed/vv-chef/800/1000"
+                alt="Private chef preparing a meal"
+              />
+            </div>
+            <h3 class="features-grid__title">Private chef available</h3>
+            <p class="features-grid__desc">
+              Arrive and be fed. A private chef can handle everything from one
+              celebratory dinner to the full stay.
+            </p>
+          </div>
+
+          <div class="features-grid__item">
+            <div class="features-grid__media">
+              <img
+                class="cover-image"
+                src="https://picsum.photos/seed/vv-beach/800/1000"
+                alt="Farm and private beach"
+              />
+            </div>
+            <h3 class="features-grid__title">Farm &amp; beach</h3>
+            <p class="features-grid__desc">
+              Native forest, farm walks, restored wetlands, and a 15-minute
+              track through pōhutukawa to a private beach.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial padding-vertical-xhuge">
+      <div class="container-desktop-large padding-global-margins">
+        <blockquote class="testimonial__quote">
+          "Our trip was truly surreal. We had our immediate families together
+          from New York and New Zealand. Every one of us felt we were in a dream
+          for our three-day stay on the property. I cannot recommend Hillbrook
+          enough. We will definitely be making a trip back."
+        </blockquote>
+        <p class="testimonial__attribution">
+          A guest – New York &amp; New Zealand
+        </p>
+      </div>
+    </section>
+
+    <section class="farm-plan padding-vertical-xhuge">
+      <div class="container-desktop-large padding-global-margins">
+        <div class="farm-plan__row">
+          <div class="farm-plan__left">
+            <div
+              class="farm-plan__small-media"
+              data-parallax
+              data-parallax-speed="0.15"
+            >
+              <img
+                class="cover-image"
+                src="https://picsum.photos/seed/vv-farm-small/700/500"
+                alt="Coastal lawn at Hillbrook"
+              />
+            </div>
+
+            <div class="farm-plan__text">
+              <h2 class="farm-plan__heading">
+                <em>A farm</em> with a fifty-year plan
+              </h2>
+              <p class="farm-plan__desc">
+                Hillbrook sits on 45 hectares of working regenerative farm,
+                native forest, and coastline. The Tapapararoa Stream starts and
+                ends on the property. Eleven hectares of new native forest have
+                been planted since 2021. Wetlands restored. A whole-farm
+                predator control programme running. The NZ Dotterel nests
+                undisturbed on the beach. Guests walk through planting years
+                side by side — 2021, 2022, 2026 — a visible timeline of slow,
+                intentional recovery. The land is not a backdrop. It has its own
+                life, and being here puts you inside it.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="farm-plan__right"
+            data-parallax
+            data-parallax-speed="0.08"
+          >
+            <img
+              class="cover-image"
+              src="https://picsum.photos/seed/vv-farm-aerial/1200/1600"
+              alt="Aerial view of Hillbrook coastline"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq padding-vertical-xhuge">
+      <div class="container-desktop-large padding-global-margins">
+        <h2 class="faq__heading">FAQs</h2>
+
+        <div class="faq__list">
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span>How far in advance do people usually book?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Most groups book six to twelve months ahead, especially for peak
+                summer dates and long weekends. For milestone events we'd
+                recommend reaching out as early as possible to lock in your
+                preferred dates.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span>Is there a minimum stay?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Yes, minimum stays vary by season — typically three nights in
+                shoulder season and longer over peak periods. Get in touch and
+                we'll confirm exact requirements for your dates.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span>Can you cater for large group meals?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Absolutely. A private chef is available for everything from a
+                single celebratory dinner to catering the full stay for all
+                guests.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span
+                >We're travelling from overseas — is this straightforward to
+                plan from a distance?</span
+              >
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Yes — many of our guests coordinate their stay entirely from
+                overseas. We handle logistics, recommendations, and any local
+                arrangements so you can plan with confidence from anywhere.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span
+                >Is Hillbrook suitable for mixed-age groups with young
+                children?</span
+              >
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Yes — the property is well suited to multi-generational groups,
+                with plenty of space for children to safely explore the farm,
+                beach, and grounds alongside adults.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="enquiry-section" id="enquirySection">
+      <div class="enquiry-section__bg-wrap">
+        <img
+          class="enquiry-section__img"
+          id="enquiryImg"
+          src="https://picsum.photos/seed/forest-cabin/1920/1080"
+          alt="Evening at Hillbrook"
+        />
+      </div>
+      <div class="enquiry-section__overlay"></div>
+
+      <div class="enquiry-section__content">
+        <h2
+          class="enquiry-section__text"
+          id="enquiryText"
+          aria-label="Tell us what you're planning"
+        >
+          <span id="enquiryLine1"></span>
+        </h2>
+
+        <p class="enquiry-section__subtext" id="enquirySubtext">
+          We'll let you know if we have the dates and talk through what's
+          possible.
+        </p>
+
+        <a href="#" class="enquiry-section__cta" id="enquiryCta">
+          SEND US AN ENQUIRY
+          <span class="enquiry-section__cta-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer-section">
+      <div class="footer-section__left">
+        <h2 class="footer-section__heading">
+          Something shifts when the right people find <em>the right place.</em>
+        </h2>
+
+        <div class="footer-section__form">
+          <input
+            type="email"
+            placeholder="Email address"
+            class="footer-section__input"
+          />
+          <!-- reCAPTCHA -->
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+        </div>
+
+        <a href="#" class="footer-section__cta">
+          BOOK NOW
+          <span class="footer-section__cta-arrow">&#8594;</span>
+        </a>
+      </div>
+
+      <div class="footer-section__right">
+        <nav class="footer-section__nav">
+          <div class="footer-section__nav-group">
+            <a href="index.html#sectionFarm"
+              ><span class="dot"></span
+              ><span class="link-text">THE RETREAT</span></a
+            >
+            <a href="index.html#sectionBeach"
+              ><span class="dot"></span><span class="link-text">STAYS</span></a
+            >
+            <a href="activities.html"
+              ><span class="dot"></span
+              ><span class="link-text">ACTIVITIES</span></a
+            >
+            <a href="gallery.html"
+              ><span class="dot"></span
+              ><span class="link-text">Gallery</span></a
+            >
+            <a href="contact-us.html"
+              ><span class="dot"></span
+              ><span class="link-text">Contact</span></a
+            >
+            <a href="book.html"
+              ><span class="dot"></span
+              ><span class="link-text">Booking</span></a
+            >
+          </div>
+        </nav>
+
+        <div class="footer-section__social">
+          <a
+            href="https://www.instagram.com/vatsalyavihar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <svg
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4.5" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/vatsalyaviharudaipur/"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- vatsalya vihar footer -->
+    <footer class="site-footer">
+      <h2 class="site-footer__brand">
+        <span class="site-footer__brand-text">VATSALYA VIHAR</span>
+      </h2>
+      <div class="site-footer__bottom">
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vatsalya_vihar.js"></script>
+  </body>
+</html>
