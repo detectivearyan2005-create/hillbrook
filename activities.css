@@ -1,0 +1,687 @@
+/* ============ ACTIVITIES SECTION ============ */
+.activities {
+  background-color: #f2ede4;
+  padding: 70px 4vw 90px;
+}
+
+.activities__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.activity-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4.6;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.activity-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.activity-card:hover .activity-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+.activity-card__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Neue Haas", sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: #1a1208;
+}
+
+.activity-card__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #c9a96e;
+  flex-shrink: 0;
+}
+
+/* ── Mobile: horizontal swipe carousel ── */
+.activities__slider-track {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .activities__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .activities {
+    padding: 48px 5vw 56px;
+  }
+
+  .activities__grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 6px;
+  }
+
+  .activities__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .activity-card {
+    flex: 0 0 62vw;
+    max-width: 240px;
+    scroll-snap-align: start;
+  }
+
+  .activity-card__label {
+    font-size: 0.92rem;
+  }
+
+  .activities__slider-track {
+    display: block;
+    height: 3px;
+    background: rgba(26, 18, 8, 0.1);
+    margin-top: 18px;
+    border-radius: 999px;
+    position: relative;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .activities__slider-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    background: #c9a96e;
+    border-radius: 999px;
+    transition: transform 0.15s ease;
+  }
+}
+
+@media (max-width: 380px) {
+  .activity-card {
+    flex: 0 0 72vw;
+  }
+}
+
+/* ============ ADVENTURE SECTION ============ */
+.adventure {
+  background-color: #f2ede4;
+  padding: 0rem 6vw 0rem;
+}
+
+.adventure__inner {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.adventure__title {
+  font-family: "Editorial Old", serif;
+  font-weight: 200;
+  font-size: 3.75em;
+  line-height: 1.08333;
+  letter-spacing: 0;
+  color: #1a1208;
+  margin: 0 0 2.5rem 0;
+}
+
+.adventure__title em {
+  font-family: "Editorial Old", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.adventure__desc {
+  font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
+  font-size: 1.11vw;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: #0a0b09;
+  max-width: 420px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .adventure__desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .adventure {
+    padding: 4rem 6vw 4.5rem;
+  }
+
+  .adventure__title {
+    font-size: clamp(2.4rem, 9vw, 3.2rem);
+    margin-bottom: 1.6rem;
+  }
+
+  .adventure__desc {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .adventure__title br {
+    display: none;
+  }
+}
+
+/* ============ CURATED SERVICES SECTION ============ */
+.curated-services {
+  background-color: #f2ede4;
+  padding: 5rem 4vw 6rem;
+}
+
+.curated-services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 28px;
+  row-gap: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.curated-service-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.curated-service-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 3.75;
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 1.4rem;
+}
+
+.curated-service-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.curated-service-card:hover .curated-service-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+.curated-service-card__title {
+  font-family: "Editorial Old", serif;
+  letter-spacing: 0;
+  margin: 0 0 0.9rem 0;
+  font-size: 2.25em;
+  font-weight: 200;
+  line-height: 1.13889;
+  color: #1a1208;
+}
+
+.curated-service-card__desc {
+  font-family: "Neue Haas", sans-serif;
+  color: #0a0b09;
+  letter-spacing: 0.05em;
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 0.9rem 0;
+}
+
+.curated-service-card__link {
+  font-family: "Neue Haas", sans-serif;
+  font-size: 1.11vw;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #1a1208;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.curated-service-card__link:hover {
+  opacity: 0.65;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .curated-services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 48px;
+  }
+
+  .curated-service-card__desc,
+  .curated-service-card__link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .curated-services {
+    padding: 3.5rem 6vw 4rem;
+  }
+
+  .curated-services__grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .curated-service-card__title {
+    font-size: 1.9em;
+  }
+
+  .curated-service-card__desc,
+  .curated-service-card__link {
+    font-size: 0.92rem;
+  }
+}
+
+/* ============ GALLERY STREAM (endless-flowing masonry) ============ */
+
+.gallery-stream {
+  position: relative;
+  background-color: #f2ede4;
+  /* Tall scroll runway — this is what the sticky viewport pins
+     against. More height = more scroll distance before the columns
+     have moved through their full range. Tune to taste. */
+  height: 320vh;
+  padding-bottom: 6vh;
+}
+
+/* Pinned viewport: stays glued to the top of the window for the
+   entire height of .gallery-stream above, then releases naturally
+   once the section has scrolled past. Everything inside — heading
+   and columns alike — is clipped to this box. */
+.gallery-stream__viewport {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Heading — completely static. It is never touched by JS; only
+   the columns behind it move. ── */
+.gallery-stream__heading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  width: min(90%, 720px);
+  pointer-events: none;
+}
+
+.gallery-stream__title {
+  font-family: "Editorial Old", serif;
+  font-weight: 200;
+  font-size: clamp(2.1rem, 4.2vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: #1a1208;
+  margin-bottom: 1.3rem;
+  text-shadow: 0 2px 30px rgba(242, 237, 228, 0.9);
+}
+
+.gallery-stream__title em {
+  font-family: "Editorial Old", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.gallery-stream__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1a1208;
+  text-decoration: none;
+  transition: gap 0.2s;
+  pointer-events: auto;
+}
+.gallery-stream__cta:hover {
+  gap: 1rem;
+}
+.gallery-stream__cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #c9a96e;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* ── Columns ── */
+.gallery-stream__columns {
+  position: relative;
+  width: min(100%, 1600px);
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 0 4vw;
+  z-index: 1;
+}
+
+.gallery-column {
+  position: relative;
+  height: 100%;
+  overflow: hidden; /* clips the track to the viewport — cards outside are simply not visible, never destroyed */
+}
+
+/* Static masonry stagger — each column starts at a different vertical
+   position, purely via padding (layout-time, not scroll-driven), so
+   the grid never reads as four aligned rows. */
+.gallery-column--1 {
+  padding-top: 0;
+}
+.gallery-column--2 {
+  padding-top: 160px;
+}
+.gallery-column--3 {
+  padding-top: 60px;
+}
+.gallery-column--4 {
+  padding-top: 220px;
+}
+
+/* The track holds two identical sets of cards back-to-back. Moving it
+   up by one set's height and resetting is invisible — that's the
+   entire "endless" trick. Normal flow (flex column), never absolute. */
+.gallery-column__track {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.gallery-column__set {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Individual card ── */
+.gallery-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  margin: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 16px 46px rgba(20, 14, 6, 0.14);
+  will-change: transform;
+  /* the small static per-card jitter (baked in once by JS) lives on
+     this element's own transform, entirely separate from the
+     scroll-driven transform on the ancestor .gallery-column__track */
+}
+
+/* Slightly vary card heights across a set for a true masonry feel
+   without ever leaving flex/flow layout */
+.gallery-card--tall {
+  aspect-ratio: 3 / 4.6;
+}
+.gallery-card--short {
+  aspect-ratio: 3 / 3.4;
+}
+
+/* Injected at runtime around each <img> — carries the scroll-driven
+   "image lags behind its card" transform, kept separate from the
+   CSS-only hover-zoom on the <img> itself. */
+.gallery-parallax-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.gallery-card img {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery-card:hover img {
+    transform: scale(1.04);
+  }
+}
+
+.gallery-card__caption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0.9rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+.gallery-card__caption::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+}
+.gallery-card__caption-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 8, 0.55) 0%,
+    transparent 55%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Responsive: below this width the stream/pin/loop is switched
+   off entirely (see JS) and the grid becomes a simple static
+   2-column, then 1-column, layout in normal flow. ── */
+@media (max-width: 1100px) {
+  .gallery-stream__columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-column--3,
+  .gallery-column--4 {
+    display: none; /* keep it to two live columns on tablet */
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-stream {
+    height: auto;
+  }
+  .gallery-stream__viewport {
+    position: static;
+    height: auto;
+    display: block;
+    padding: 0rem 0 3rem;
+  }
+  .gallery-stream__heading {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0 6vw 2rem;
+    pointer-events: auto;
+  }
+  .gallery-stream__columns {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0 6vw;
+    gap: 0;
+  }
+  .gallery-column {
+    height: auto;
+    overflow: visible;
+    padding-top: 0 !important;
+  }
+  .gallery-column--3,
+  .gallery-column--4 {
+    display: block;
+  }
+  .gallery-column__track {
+    transform: none !important;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  /* only render the first (non-duplicated) set on mobile */
+  .gallery-column__set:nth-of-type(2) {
+    display: none;
+  }
+  .gallery-card {
+    transform: none !important;
+  }
+  .gallery-parallax-layer {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-column__track,
+  .gallery-card,
+  .gallery-parallax-layer,
+  .gallery-card img {
+    transition: none !important;
+    transform: none !important;
+  }
+  .gallery-stream {
+    height: auto;
+  }
+  .gallery-stream__viewport {
+    position: static;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-stream {
+    height: auto;
+  }
+  .gallery-stream__viewport {
+    position: static;
+    height: auto;
+    display: block;
+    padding: 4rem 0 3rem;
+  }
+  .gallery-stream__heading {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0 6vw 2rem;
+    pointer-events: auto;
+  }
+
+  /* ── horizontal swipe slider ── */
+  .gallery-stream__columns {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 0 6vw 6px;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .gallery-stream__columns::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-column {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    height: auto;
+    overflow: visible;
+    padding-top: 0 !important;
+  }
+  .gallery-column--3,
+  .gallery-column--4 {
+    display: flex; /* show all 4 columns' cards inline instead of hiding */
+  }
+
+  .gallery-column__track {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    transform: none !important;
+  }
+  .gallery-column__set {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+  /* only render the first (non-duplicated) set on mobile */
+  .gallery-column__set:nth-of-type(2) {
+    display: none;
+  }
+
+  .gallery-card {
+    flex: 0 0 62vw;
+    max-width: 240px;
+    scroll-snap-align: start;
+    transform: none !important;
+  }
+  .gallery-parallax-layer {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,521 @@
+/* ── HILLBROOK OPTIONS SECTION ── */
+.options-section {
+  width: 100%;
+  background-color: #f0eae1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.options-section__inner {
+  max-width: 560px;
+}
+
+.options-section__heading {
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  font-family: "Editorial Old", serif;
+  font-size: 3.75em;
+  font-weight: 200;
+  line-height: 1.08333;
+  color: #1a1208;
+}
+
+.options-section__heading em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.options-section__desc {
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.16;
+  max-width: 75%;
+}
+
+.options-section__desc em {
+  font-weight: 400;
+}
+
+.options-section__subheading {
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  font-family: "Editorial Old", serif;
+  font-weight: 200;
+  font-size: 1.9em;
+  line-height: 1.15;
+  color: #1a1208;
+}
+
+.options-section__subheading em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .options-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .options-section__inner {
+    max-width: 480px;
+  }
+  .options-section__heading {
+    font-size: 2.8em;
+  }
+  .options-section__desc {
+    font-size: 0.95rem;
+  }
+  .options-section__subheading {
+    font-size: 1.6em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .options-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .options-section__inner {
+    max-width: 100%;
+  }
+  .options-section__heading {
+    font-size: 2.2em;
+  }
+  .options-section__desc {
+    font-size: 0.88rem;
+  }
+  .options-section__subheading {
+    font-size: 1.4em;
+  }
+}
+
+/* ── PRICING SECTION ── */
+.pricing-section {
+  width: 100%;
+  background-color: #f0eae1;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.pricing-section__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── CARD ── */
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.2rem 2rem;
+  background-color: #faf7f2;
+  border-radius: 0.3125em;
+}
+
+.pricing-card__title {
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  font-family: "Editorial Old", serif;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.13889;
+  color: #1a1208;
+}
+
+.pricing-card__title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.pricing-card__divider-h {
+  border-top: 1px solid rgba(26, 18, 8, 0.15);
+  margin: 1.8rem 0;
+}
+
+.pricing-card__divider-v {
+  width: 1px;
+  height: 4.5rem; /* fixed short height, not full stretch */
+  align-self: center; /* centers it next to the guest count */
+  background-color: rgba(26, 18, 8, 0.15);
+  margin: 0 1.8rem;
+}
+
+.pricing-card__rates {
+  display: flex;
+  align-items: center; /* center vertically instead of stretch */
+  padding: 1.4rem 0 1.8rem;
+}
+
+.pricing-card__guests {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 0;
+  gap: 0.6rem;
+}
+
+.pricing-card__prices {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* more space between low/high season blocks */
+}
+
+.pricing-card__price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.pricing-card__label {
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-weight: 700; /* bolder, matches reference */
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1a1208;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+.pricing-card__guest-count {
+  font-family: "Editorial Old", serif;
+  font-weight: 300;
+  font-size: 2em; /* bigger, matches reference proportions */
+  color: #1a1208;
+}
+.pricing-card__price {
+  font-family: "Editorial Old", serif;
+  font-weight: 300;
+  font-size: 2em; /* bigger, matches reference proportions */
+  color: #1a1208;
+}
+.pricing-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.pricing-card__list li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: #1a1208;
+}
+
+.pricing-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #c9a96e;
+}
+
+.pricing-card__footnote {
+  margin: auto 0 0;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: rgba(26, 18, 8, 0.6);
+}
+
+/* Tablet: 1 column per row, stacked */
+@media (max-width: 1024px) {
+  .pricing-section__row {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+  .pricing-card__title {
+    font-size: 1.9em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .pricing-section {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .pricing-card {
+    padding: 1.8rem 1.5rem;
+  }
+  .pricing-card__title {
+    font-size: 1.6em;
+  }
+  .pricing-card__guest-count,
+  .pricing-card__price {
+    font-size: 1.3em;
+  }
+  .pricing-card__divider-v {
+    margin: 0 1rem;
+  }
+}
+
+/* ── START PLANNING YOUR STAY SECTION ── */
+.planning-section {
+  width: 100%;
+  background-color: #f0eae1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.planning-section__heading {
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  font-family: "Editorial Old", serif;
+  font-size: 3.75em;
+  font-weight: 200;
+  line-height: 1.08333;
+  color: #1a1208;
+}
+
+.planning-section__heading em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.planning-section__intro {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.planning-section__intro--spaced {
+  margin-top: 1.4rem;
+  margin-bottom: 3.5rem;
+}
+
+.planning-section__link {
+  color: #1a1208;
+  text-decoration: none;
+}
+
+.planning-section__link em {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* ── FORM COLUMN (matches _8-columns: max-width 66.6667%, centered) ── */
+.planning-section__form-col {
+  max-width: 66.6667%;
+  margin: 0 auto;
+}
+
+.planning-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.planning-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.planning-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.planning-form__field label {
+  margin-bottom: 0.6rem;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: #1a1208;
+}
+
+.planning-form__field input,
+.planning-form__field textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1a1208;
+  padding: 0.4rem 0;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.95rem;
+  color: #1a1208;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.planning-form__field input::placeholder,
+.planning-form__field textarea::placeholder {
+  color: rgba(26, 18, 8, 0.35);
+}
+
+.planning-form__field input:focus,
+.planning-form__field textarea:focus {
+  border-color: #c9a96e;
+}
+
+.planning-form__field.has-error input,
+.planning-form__field.has-error textarea {
+  border-color: #c0392b;
+}
+
+.planning-form__error {
+  display: block;
+  min-height: 1.1em;
+  margin-top: 0.35rem;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.75rem;
+  color: #c0392b;
+}
+
+.planning-form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.planning-form__checkbox input[type="checkbox"] {
+  margin-top: 0.2rem;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: #1a1208;
+  cursor: pointer;
+}
+
+.planning-form__checkbox span {
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: #1a1208;
+}
+
+.g-recaptcha {
+  margin-bottom: 1.8rem;
+}
+
+.planning-form__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1208;
+  padding: 0;
+  transition: gap 0.2s;
+}
+
+.planning-form__submit:hover {
+  gap: 0.95rem;
+}
+
+.planning-form__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.planning-form__submit-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #c9a96e;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.planning-form__status {
+  margin-top: 1rem;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.9rem;
+  color: #1a1208;
+}
+
+.planning-form__status.is-error {
+  color: #c0392b;
+}
+
+.planning-form__status.is-success {
+  color: #4a7c59;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .planning-section__form-col {
+    max-width: 85%;
+  }
+  .planning-section__heading {
+    font-size: 2.8em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .planning-section {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .planning-section__form-col {
+    max-width: 100%;
+  }
+  .planning-form__grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .planning-section__heading {
+    font-size: 2.1em;
+  }
+  .planning-section__intro {
+    font-size: 0.88rem;
+  }
+}

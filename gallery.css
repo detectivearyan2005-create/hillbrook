@@ -1,0 +1,92 @@
+/* ── WEDDING GALLERY HEADING ── */
+.wedding-gallery-heading {
+  background-color: #f0eae1;
+  padding: 14rem 6vw 2rem;
+}
+
+.wedding-gallery-heading__text {
+  font-family: "Editorial Old", serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  line-height: 1.1;
+  color: #1a1208;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.wedding-gallery-heading__text em {
+  font-family: "Editorial Old", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .wedding-gallery-heading {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+}
+.wedding-gallery {
+  background-color: #f0eae1;
+  padding: 2rem 6vw 5rem;
+}
+
+.wedding-gallery__grid {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.wedding-gallery__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 28px; /* ← increased from 14px so float has room */
+  border-radius: 2px;
+  break-inside: avoid;
+  animation: galleryFloat 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.wedding-gallery__img:nth-child(3n) {
+  animation-duration: 7s;
+  animation-delay: -1.5s;
+}
+.wedding-gallery__img:nth-child(3n + 1) {
+  animation-duration: 6.5s;
+  animation-delay: -3s;
+}
+.wedding-gallery__img:nth-child(3n + 2) {
+  animation-duration: 5.5s;
+  animation-delay: -4.5s;
+}
+
+@keyframes galleryFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px); /* ← reduced from -10px */
+  }
+}
+
+@media (max-width: 900px) {
+  .wedding-gallery__grid {
+    column-count: 2;
+    column-gap: 14px;
+  }
+  .wedding-gallery__img {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wedding-gallery__grid {
+    column-count: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wedding-gallery__img {
+    animation: none;
+  }
+}

@@ -1,0 +1,815 @@
+/* ── GATHER SECTION (full-width image + 3 cards, cards pinned inside image) ── */
+.gather-section {
+  position: relative;
+  width: 100%;
+}
+
+.gather-section__media {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.gather-section__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 130%;
+  top: -15%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  display: block;
+}
+
+.gather-section__cards {
+  position: absolute;
+  left: 6vw;
+  right: 6vw;
+  bottom: 4vh; /* ← anchored to bottom of the image, always inside it */
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gather-card {
+  background: #f5f0e8;
+  padding: 1.8rem 1.6rem;
+}
+
+.gather-card__num {
+  display: block;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #1a1208;
+  margin-bottom: 2rem;
+}
+
+.gather-card__title {
+  font-family: "Editorial Old", sans-serif;
+  font-weight: 200;
+  font-size: 1.7em;
+  line-height: 1.13889;
+  letter-spacing: 0;
+  color: #1a1208;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.gather-card__desc {
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .gather-card__title {
+    font-size: 1.5em;
+  }
+  .gather-card__desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .gather-section__media {
+    position: relative;
+    height: auto;
+    min-height: 100vh; /* container grows to fit content, floor of 100vh */
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+
+  .gather-section__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%; /* stretches to match container's actual height */
+    top: 0;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .gather-section__cards {
+    position: relative; /* back in normal flow, drives the container's height */
+    left: auto;
+    right: auto;
+    bottom: auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 1.2rem 3rem;
+    min-height: 100vh;
+    justify-content: center; /* centers the 3 cards vertically on the image */
+  }
+
+  .gather-card {
+    padding: 1.6rem 1.4rem;
+    background: #f5f0e8;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gather-section__img {
+    transition: none;
+  }
+}
+
+/* ── STATS ROW (4-col accommodation meta bar) ── */
+/* ── STATS ROW (4-col accommodation meta bar) ── */
+.stats-row {
+  display: flex;
+  width: 100%;
+  background-color: #f0eae1;
+  border-bottom: 1px solid var(--color--disabled, #d8d0c4);
+  margin: 0; /* no gap above/below — sits flush against sections around it */
+}
+.stats-row__item {
+  width: 25%;
+  padding: 3.375em 2em;
+  text-align: center;
+  border-right: 1px solid var(--color--disabled, #d8d0c4);
+  font-family: "Editorial Old", serif;
+}
+
+.stats-row__item--last {
+  border-right: none;
+}
+
+.stats-row__value {
+  letter-spacing: 0;
+  margin: 0 0 0.4em;
+  font-family: "Editorial Old", serif;
+  font-size: 2.25em;
+  font-weight: 200;
+  line-height: 1.13889;
+  color: #1a1208;
+}
+
+.stats-row__label {
+  margin: 0;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #9a9186; /* muted grey like your screenshot */
+}
+
+/* Tablet: 2x2 grid */
+@media (max-width: 900px) {
+  .stats-row {
+    flex-wrap: wrap;
+  }
+
+  .stats-row__item {
+    width: 50%;
+    padding: 2.4em 1.2em;
+  }
+
+  /* right border only on left column of each row */
+  .stats-row__item:nth-child(odd) {
+    border-right: 1px solid var(--color--disabled, #d8d0c4);
+  }
+  .stats-row__item:nth-child(even) {
+    border-right: none;
+  }
+
+  /* bottom border between the two rows */
+  .stats-row__item:nth-child(1),
+  .stats-row__item:nth-child(2) {
+    border-bottom: 1px solid var(--color--disabled, #d8d0c4);
+  }
+
+  .stats-row__value {
+    font-size: 1.7em;
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 540px) {
+  .stats-row__item {
+    width: 100%;
+    border-right: none !important;
+    border-bottom: 1px solid var(--color--disabled, #d8d0c4);
+    padding: 2em 1.2em;
+  }
+
+  .stats-row__item--last {
+    border-bottom: none;
+  }
+
+  .stats-row__value {
+    font-size: 1.5em;
+  }
+}
+/* ── FEATURES GRID (4-col image + heading + paragraph) ── */
+.features-grid {
+  width: 100%;
+  background-color: #f0eae1;
+  /* padding-bottom: 4re    m; space before next section */
+}
+
+.container-desktop-large {
+  width: 100%;
+  max-width: var(--container--desktop-large, 1600px);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.padding-global-margins {
+  padding-right: var(
+    --sizes-desktop--global-margin,
+    4vw
+  ); /* side breathing room */
+  padding-left: var(--sizes-desktop--global-margin, 4vw);
+}
+
+.features-grid__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.features-grid__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-grid__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+
+.features-grid__media .cover-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+.features-grid__title {
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  font-family: "Editorial Old", serif;
+  font-size: 2.25em; /* matches your global h3 */
+  font-weight: 200;
+  line-height: 1.13889;
+  color: #1a1208;
+}
+
+.features-grid__desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-size: 1.11vw; /* matches your global body/p sizing */
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* Tablet: 2x2 grid */
+@media (max-width: 1024px) {
+  .features-grid__row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+  .features-grid__title {
+    font-size: 1.9em;
+  }
+  .features-grid__desc {
+    font-size: 1.6vw; /* vw scaling gets too small on tablet width, bump it up */
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 600px) {
+  .features-grid__row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .features-grid__media {
+    aspect-ratio: 3 / 4;
+  }
+  .features-grid__title {
+    font-size: 1.6em;
+  }
+  .features-grid__desc {
+    font-size: 3.6vw; /* vw breaks down on narrow screens, needs its own scale */
+  }
+}
+
+/* ── TESTIMONIAL QUOTE SECTION ── */
+.testimonial {
+  width: 100%;
+  background-color: #f0eae1;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+.testimonial__quote {
+  margin: 0 auto 2.5rem;
+  max-width: 62ch;
+  text-align: center;
+  font-family: "Editorial Old", serif;
+  font-weight: 200;
+  font-size: 2.2em;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: #1a1208;
+}
+
+.testimonial__attribution {
+  margin: 0;
+  text-align: center;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  /* font-weight: 200; */
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: #0a0b09;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .testimonial {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+  .testimonial__quote {
+    font-size: 1.7em;
+    max-width: 50ch;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .testimonial {
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+  }
+  .testimonial__quote {
+    font-size: 1.3em;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+  .testimonial__attribution {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── FARM PLAN SECTION (small image + text left, tall image right) ── */
+.farm-plan {
+  width: 100%;
+  background-color: #f0eae1;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+.farm-plan__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: stretch;
+}
+
+.farm-plan__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.farm-plan__small-media {
+  position: relative;
+  width: 45%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: auto;
+}
+
+.farm-plan__small-media .cover-image {
+  object-fit: cover;
+  width: 100%;
+  height: 130%; /* extra height so parallax translate never reveals edges */
+  position: relative;
+  top: -15%;
+  display: block;
+  will-change: transform;
+}
+
+.farm-plan__text {
+  margin-top: 6rem;
+}
+
+.farm-plan__heading {
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-family: "Editorial Old", serif;
+  font-size: 3.75em;
+  font-weight: 200;
+  line-height: 1.08333;
+  color: #1a1208;
+}
+
+.farm-plan__heading em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.farm-plan__desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 70%;
+  color: var(--color--black, #0a0b09);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 16px;
+  /* font-weight: 300; */
+  line-height: 1.15;
+}
+
+.farm-plan__right {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.farm-plan__right .cover-image {
+  object-fit: cover;
+  width: 100%;
+  height: 118%; /* extra height so parallax translate never reveals edges */
+  position: relative;
+  top: -9%;
+  display: block;
+  will-change: transform;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .farm-plan__row {
+    gap: 2.5rem;
+  }
+  .farm-plan__heading {
+    font-size: 2.6em;
+  }
+  .farm-plan__small-media {
+    width: 60%;
+  }
+  .farm-plan__text {
+    margin-top: 3rem;
+  }
+}
+/* Mobile: stack single column */
+@media (max-width: 800px) {
+  .farm-plan__row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .farm-plan__small-media {
+    display: none;
+  }
+
+  .farm-plan__text {
+    margin-top: 0;
+  }
+
+  .farm-plan__heading {
+    font-size: 2em;
+  }
+
+  .farm-plan__desc {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .farm-plan__right {
+    width: 100%;
+    height: auto;
+    aspect-ratio: unset;
+    margin: 0;
+  }
+
+  .farm-plan__right .cover-image {
+    height: auto; /* let image keep its natural proportions */
+    top: 0; /* cancel the -9% parallax buffer offset */
+    object-fit: contain; /* show the whole image, no cropping */
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .farm-plan__small-media .cover-image,
+  .farm-plan__right .cover-image {
+    transition: none;
+  }
+}
+
+/* ── FAQ ACCORDION SECTION ── */
+.faq {
+  width: 100%;
+  background-color: #f0eae1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.faq__heading {
+  text-align: center;
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 3.5rem;
+  font-family: "Editorial Old", serif;
+  font-weight: 200;
+  font-size: 3em;
+  line-height: 1.1;
+  color: #1a1208;
+}
+
+.faq__list {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color--disabled, #d8d0c4);
+}
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #1a1208;
+}
+
+.faq__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.faq__icon::before,
+.faq__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #1a1208;
+  transition: transform 0.3s ease;
+}
+
+.faq__icon::before {
+  width: 18px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+
+.faq__icon::after {
+  width: 1px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+}
+
+.faq__question[aria-expanded="true"] .faq__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+.faq__answer {
+  overflow: hidden;
+  max-height: 0;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
+}
+
+.faq__answer p {
+  margin: 0;
+  padding-bottom: 1.6rem;
+  max-width: 65ch;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: #4a4238;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .faq__heading {
+    font-size: 2.4em;
+    margin-bottom: 2.5rem;
+  }
+  .faq__question {
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .faq__heading {
+    font-size: 2em;
+    margin-bottom: 2rem;
+  }
+  .faq__question {
+    font-size: 0.95rem;
+    padding: 1.2rem 0;
+    gap: 1rem;
+  }
+  .faq__icon {
+    width: 14px;
+    height: 14px;
+  }
+  .faq__icon::before {
+    width: 14px;
+  }
+  .faq__icon::after {
+    height: 14px;
+  }
+  .faq__answer p {
+    font-size: 0.85rem;
+    padding-bottom: 1.2rem;
+  }
+}
+
+/* ── ENQUIRY SECTION ("Tell us what you're planning") ── */
+.enquiry-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.enquiry-section__bg-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.enquiry-section__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 130%;
+  top: -15%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  display: block;
+}
+
+.enquiry-section__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(
+    10,
+    10,
+    8,
+    0.42
+  ); /* darker than book-section, matches your screenshot's dim evening look */
+  z-index: 1;
+}
+
+.enquiry-section__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.enquiry-section__text {
+  font-family: "Editorial Old", serif;
+  font-weight: 200;
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.96);
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* reuse the same char-reveal styling as book-section/quote-section */
+.enquiry-section__text .quote-char--italic {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.enquiry-section__subtext {
+  max-width: 40ch;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.enquiry-section__subtext.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.enquiry-section__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
+  backdrop-filter: none;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    gap 0.2s;
+}
+
+.enquiry-section__cta.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.enquiry-section__cta:hover {
+  gap: 0.95rem;
+  background: none;
+}
+
+.enquiry-section__cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  background: none;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .enquiry-section {
+    height: 80vh;
+    min-height: 480px;
+  }
+  .enquiry-section__text {
+    font-size: clamp(1.7rem, 7vw, 2.6rem);
+  }
+  .enquiry-section__subtext {
+    font-size: 0.85rem;
+    max-width: 30ch;
+  }
+  .enquiry-section__cta {
+    font-size: 0.72rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enquiry-section__img {
+    transition: none;
+  }
+}

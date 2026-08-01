@@ -1,0 +1,589 @@
+/* ── FARM INTRO SECTION ── */
+.farm-intro {
+  background-color: #f0eae1;
+  padding: 7rem 6vw 8rem;
+}
+
+.farm-intro__inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.farm-intro__left {
+  max-width: 55%;
+}
+
+.farm-intro__title {
+  font-family: "Editorial Old", sans-serif;
+  font-weight: 200;
+  font-size: 3.75em;
+  line-height: 1.08333;
+  letter-spacing: 0;
+  color: #1a1208;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.farm-intro__title em {
+  font-family: "Editorial Old", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.farm-intro__right {
+  color: var(--color--black);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.15;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.2rem;
+  max-width: 420px;
+  margin-left: auto;
+  margin-top: 6rem;
+}
+
+.farm-intro__desc {
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.farm-intro__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: #1a1208;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.farm-intro__cta:hover {
+  gap: 1rem;
+}
+
+.farm-intro__cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #c9a96e;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .farm-intro__left {
+    max-width: 100%;
+  }
+  .farm-intro__right {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .farm-intro__desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .farm-intro {
+    padding: 4rem 1.5rem;
+  }
+  .farm-intro__title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+}
+
+/* ── BEACH / POHUTUKAWA SECTION ── */
+.beach-section {
+  background-color: #f0eae1;
+  padding: 7vw 6vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.beach-section__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  gap: 3vw;
+  align-items: stretch;
+}
+
+/* ── LEFT: big portrait image with parallax ── */
+.beach-section__media-left {
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  min-height: 780px;
+  overflow: hidden;
+}
+
+.beach-section__img--left {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  display: block;
+}
+
+/* ── RIGHT: small image top, content below ── */
+.beach-section__right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.beach-section__media-small {
+  position: relative;
+  width: 45%;
+  max-width: 300px;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  align-self: flex-end;
+  margin-bottom: auto; /* pushes content block to the bottom */
+}
+
+.beach-section__img--small {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  display: block;
+}
+
+.beach-section__content {
+  max-width: 460px;
+  margin-top: 4rem;
+}
+
+.beach-section__title {
+  font-family: "Editorial Old", sans-serif;
+  font-weight: 200;
+  font-size: 3.75em;
+  line-height: 1.08333;
+  letter-spacing: 0;
+  color: #1a1208;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.beach-section__title em {
+  font-family: "Editorial Old", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.beach-section__desc {
+  color: var(--color--black);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 1024px) {
+  .beach-section__title {
+    font-size: 2.6em;
+  }
+  .beach-section__desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .beach-section {
+    padding: 4rem 1.5rem;
+  }
+  .beach-section__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .beach-section__media-left {
+    height: 60vh;
+    min-height: 380px;
+  }
+  .beach-section__media-small {
+    width: 55%;
+    align-self: flex-start;
+    margin-bottom: 2rem;
+  }
+  .beach-section__content {
+    margin-top: 0;
+    max-width: 100%;
+  }
+  .beach-section__title {
+    font-size: 2.2em;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beach-section__img--left,
+  .beach-section__img--small {
+    transition: none;
+  }
+}
+
+/* ── LETTING THE LAND SPEAK SECTION ── */
+.land-speak {
+  background-color: #f0eae1;
+  padding: 7rem 6vw;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.land-speak__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  max-width: 460px;
+}
+
+.land-speak__title {
+  font-family: "Editorial Old", sans-serif;
+  font-weight: 200;
+  font-size: 3.75em;
+  line-height: 1.08333;
+  letter-spacing: 0;
+  color: #1a1208;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.land-speak__title em {
+  font-family: "Editorial Old", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.land-speak__desc {
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 1.11vw;
+  font-weight: 300;
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .land-speak__desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .land-speak {
+    padding: 0rem 1.5rem;
+  }
+  .land-speak__inner {
+    max-width: 100%;
+  }
+  .land-speak__title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+}
+
+/* ── ELEVEN HECTARES SECTION ── */
+.hectares-section {
+  background-color: #f0eae1;
+  padding: 6rem 6vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hectares-section__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 52% 48%; /* ← image column bigger */
+  gap: 4vw;
+  align-items: center;
+}
+
+.hectares-section__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3.6; /* ← slightly taller/bigger image */
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.hectares-section__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 130%;
+  top: -15%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  display: block;
+}
+
+.hectares-section__content {
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 1.11vw;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.hectares-section__title {
+  font-family: "Editorial Old", sans-serif;
+  font-weight: 200;
+  font-size: 3.75em;
+  line-height: 1.08333;
+  letter-spacing: 0;
+  color: #1a1208;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hectares-section__title em {
+  font-family: "Editorial Old", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hectares-section__desc {
+  margin-top: 2rem;
+  max-width: 480px; /* ← constrains only the paragraph width */
+}
+
+.hectares-section__desc p {
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+}
+
+.hectares-section__desc p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .hectares-section__content {
+    font-size: 1rem;
+  }
+  .hectares-section__title {
+    font-size: 2.8em;
+  }
+}
+
+@media (max-width: 900px) {
+  .hectares-section__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hectares-section__media {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .hectares-section {
+    padding: 4rem 1.5rem;
+  }
+  .hectares-section__title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hectares-section__img {
+    transition: none;
+  }
+}
+/* ── SEE THE LAND COMING BACK SECTION ── */
+.land-back-section {
+  background-color: #f0eae1;
+  padding: 6rem 6vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.land-back-section__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 32% 62%;
+  gap: 6vw;
+  align-items: stretch;
+}
+
+/* ── LEFT COLUMN WRAPPER (heading+text block + small image) ── */
+.land-back-section__left-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.land-back-section__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.land-back-section__title {
+  font-family: "Editorial Old", sans-serif;
+  font-weight: 300;
+  font-size: 3.75em;
+  line-height: 1.08333;
+  letter-spacing: 0;
+  color: #1a1208;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.land-back-section__title em {
+  font-family: "Editorial Old", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.land-back-section__desc {
+  color: var(--color--black, #1a1208);
+  letter-spacing: 0.05em;
+  font-family: neue-haas-grotesk-display, "Neue Haas", sans-serif;
+  font-size: 1.11vw;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.land-back-section__desc p {
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+}
+
+.land-back-section__desc p:last-child {
+  margin-bottom: 1;
+}
+
+.land-back-section__media-small {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 4 / 4.6;
+  overflow: hidden;
+  margin-top: auto; /* pushes to bottom of the stretched left column */
+}
+
+.land-back-section__img--small {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  top: -10%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  display: block;
+}
+
+/* ── RIGHT: LARGE IMAGE (width decreased, height kept tall) ── */
+.land-back-section__media-large {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* ← caps the width so it doesn't stretch full column */
+  aspect-ratio: 4 / 5.2;
+  overflow: hidden;
+  justify-self: end; /* ← keeps natural right margin, aligns to column's right edge */
+}
+
+.land-back-section__img--large {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  top: -10%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .land-back-section__desc {
+    font-size: 1rem;
+  }
+  .land-back-section__title {
+    font-size: 2.8em;
+  }
+}
+
+@media (max-width: 900px) {
+  .land-back-section__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .land-back-section__left-col {
+    height: auto;
+  }
+  .land-back-section__media-large {
+    max-width: 100%;
+    height: 60vh;
+    justify-self: stretch;
+  }
+  .land-back-section__media-small {
+    /* max-width: 200px;
+    margin-top: 1.5rem; */
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .land-back-section {
+    padding: 0rem 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .land-back-section__title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .land-back-section__img--small,
+  .land-back-section__img--large {
+    transition: none;
+  }
+}
